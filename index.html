@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase Formularios HTML5</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- MENÚ FIJO -->
+  <nav class="navbar">
+    <div class="brand">
+      <div class="html-logo">
+        <span>5</span>
+      </div>
+
+      <div>
+        <h1>HTML5 Forms</h1>
+        <p>Clase interactiva</p>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#datos">Datos</a>
+      <a href="#teoria">Teoría</a>
+      <a href="#etiquetas">Etiquetas</a>
+      <a href="#tipos">Tipos</a>
+      <a href="#demo">Demo</a>
+      <a href="#codigo-demo">Código</a>
+      <a href="#actividad">Actividad</a>
+    </div>
+  </nav>
+
+  <!-- INICIO -->
+  <header class="hero" id="inicio">
+    <section class="hero-content">
+      <article class="hero-text">
+        <span class="pill">Submódulo 2 • HTML5</span>
+
+        <h2>Formularios en HTML5</h2>
+
+        <p>
+          Aprende a crear formularios modernos, validar campos y mostrar información
+          con JavaScript sin usar base de datos.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#datos" class="btn primary">Iniciar clase</a>
+          <a href="#demo" class="btn dark">Ver ejemplo</a>
+        </div>
+      </article>
+
+      <article class="hero-panel">
+        <div class="mock-browser">
+          <div class="browser-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="mini-form">
+            <h3>Formulario</h3>
+            <div class="fake-input"></div>
+            <div class="fake-input small"></div>
+            <div class="fake-button"></div>
+          </div>
+        </div>
+
+        <div class="floating-card card-1">input</div>
+        <div class="floating-card card-2">label</div>
+        <div class="floating-card card-3">button</div>
+      </article>
+    </section>
+  </header>
+
+  <main>
+
+    <!-- DATOS DE LA CLASE -->
+    <section id="datos" class="section datos-clase">
+      <div class="section-title">
+        <span>01</span>
+        <h2>Datos de la clase</h2>
+        <p>Información formal de la actividad que se trabajará durante la sesión.</p>
+      </div>
+
+      <div class="datos-grid">
+
+        <article class="dato-card grande">
+          <h3>Propósito de la clase</h3>
+          <p>
+            Desarrollar en el estudiante la capacidad de crear formularios en HTML5,
+            aplicando campos de entrada, etiquetas, validaciones básicas y uso de
+            JavaScript para mostrar información dentro de una página web.
+          </p>
+        </article>
+
+        <article class="dato-card">
+          <h3>Resultados de aprendizaje</h3>
+          <ul>
+            <li>Identificar las etiquetas principales de un formulario.</li>
+            <li>Crear campos de texto, número, correo y comentario.</li>
+            <li>Validar campos vacíos con JavaScript.</li>
+            <li>Mostrar datos ingresados por el usuario.</li>
+          </ul>
+        </article>
+
+        <article class="dato-card">
+          <h3>Producto esperado</h3>
+          <ul>
+            <li>Página web con formulario funcional.</li>
+            <li>Formulario con mínimo 6 campos.</li>
+            <li>Diseño con CSS.</li>
+            <li>Validación y resultado en pantalla.</li>
+          </ul>
+        </article>
+
+        <article class="dato-card">
+          <h3>Competencias</h3>
+          <ul>
+            <li>Organización de contenido con HTML5.</li>
+            <li>Uso de tecnologías digitales.</li>
+            <li>Aplicación de estilos con CSS.</li>
+            <li>Interacción básica con JavaScript.</li>
+          </ul>
+        </article>
+
+        <article class="dato-card">
+          <h3>Recursos</h3>
+          <ul>
+            <li>Visual Studio Code.</li>
+            <li>Navegador web.</li>
+            <li>HTML5, CSS y JavaScript.</li>
+            <li>GitHub para guardar el proyecto.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TEORÍA -->
+    <section id="teoria" class="section teoria">
+      <div class="section-title">
+        <span>02</span>
+        <h2>¿Qué es un formulario?</h2>
+        <p>
+          Un formulario permite que el usuario ingrese información dentro de una página web.
+        </p>
+      </div>
+
+      <div class="cards-3">
+        <article class="info-card">
+          <div class="icon">📝</div>
+          <h3>Captura datos</h3>
+          <p>
+            Permite pedir información como nombre, edad, correo, grupo, teléfono o comentarios.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="icon">✅</div>
+          <h3>Valida información</h3>
+          <p>
+            Revisa que los campos no estén vacíos y que el usuario escriba datos correctos.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="icon">⚡</div>
+          <h3>Usa JavaScript</h3>
+          <p>
+            JavaScript puede leer lo que escribió el usuario y mostrarlo dentro de la página.
+          </p>
+        </article>
+      </div>
+
+      <article class="codigo-card">
+        <h3>Estructura básica de un formulario</h3>
+
+<pre><code>&lt;form&gt;
+  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre"&gt;
+
+  &lt;button type="button"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+      </article>
+    </section>
+
+    <!-- ETIQUETAS -->
+    <section id="etiquetas" class="section etiquetas">
+      <div class="section-title">
+        <span>03</span>
+        <h2>Etiquetas principales</h2>
+        <p>Estas etiquetas son la base para construir formularios en HTML5.</p>
+      </div>
+
+      <div class="tag-grid">
+
+        <article class="tag-card">
+          <h3>&lt;form&gt;</h3>
+          <p>Contenedor principal del formulario.</p>
+        </article>
+
+        <article class="tag-card">
+          <h3>&lt;label&gt;</h3>
+          <p>Indica qué dato debe escribir el usuario.</p>
+        </article>
+
+        <article class="tag-card">
+          <h3>&lt;input&gt;</h3>
+          <p>Crea campos para escribir texto, números, correo o contraseña.</p>
+        </article>
+
+        <article class="tag-card">
+          <h3>&lt;textarea&gt;</h3>
+          <p>Permite escribir comentarios o textos largos.</p>
+        </article>
+
+        <article class="tag-card">
+          <h3>&lt;select&gt;</h3>
+          <p>Crea una lista desplegable de opciones.</p>
+        </article>
+
+        <article class="tag-card">
+          <h3>&lt;button&gt;</h3>
+          <p>Ejecuta una acción al presionarlo.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TIPOS DE INPUT -->
+    <section id="tipos" class="section tipos">
+      <div class="section-title">
+        <span>04</span>
+        <h2>Tipos de input</h2>
+        <p>HTML5 incluye varios tipos de campos según el dato que se necesita.</p>
+      </div>
+
+      <div class="tabla">
+        <div class="fila encabezado">
+          <span>Tipo</span>
+          <span>Uso</span>
+          <span>Ejemplo</span>
+        </div>
+
+        <div class="fila">
+          <span>text</span>
+          <span>Texto normal</span>
+          <code>&lt;input type="text"&gt;</code>
+        </div>
+
+        <div class="fila">
+          <span>number</span>
+          <span>Números</span>
+          <code>&lt;input type="number"&gt;</code>
+        </div>
+
+        <div class="fila">
+          <span>email</span>
+          <span>Correo electrónico</span>
+          <code>&lt;input type="email"&gt;</code>
+        </div>
+
+        <div class="fila">
+          <span>password</span>
+          <span>Contraseña</span>
+          <code>&lt;input type="password"&gt;</code>
+        </div>
+
+        <div class="fila">
+          <span>date</span>
+          <span>Fecha</span>
+          <code>&lt;input type="date"&gt;</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="section demo-section">
+      <div class="section-title white">
+        <span>05</span>
+        <h2>Ejemplo interactivo</h2>
+        <p>El usuario ingresa su nombre y edad. JavaScript valida y muestra el resultado.</p>
+      </div>
+
+      <div class="demo-layout">
+
+        <article class="demo-form-card">
+          <h3>Formulario básico</h3>
+          <p>Completa los campos y presiona el botón.</p>
+
+          <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" placeholder="Escribe tu edad">
+
+            <button type="button" onclick="mostrarDatos()">Mostrar datos</button>
+          </form>
+        </article>
+
+        <article class="demo-result-card">
+          <h3>Resultado</h3>
+
+          <div id="resultado" class="resultado">
+            Aquí aparecerá la información capturada.
+          </div>
+
+          <div class="mini-explicacion">
+            <h4>¿Qué hace JavaScript?</h4>
+            <p>
+              Toma el valor de los campos con <strong>getElementById</strong> y lo muestra dentro del elemento resultado.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CÓDIGO DEL DEMO -->
+    <section id="codigo-demo" class="section ver-codigo">
+      <div class="section-title codigo-title">
+        <span>06</span>
+        <h2>Código del demo</h2>
+        <p>
+          Aquí pueden ver el código del ejemplo básico para realizarlo en su laptop.
+          Selecciona HTML, CSS o JavaScript.
+        </p>
+      </div>
+
+      <div class="code-tabs">
+        <button type="button" class="code-tab active" onclick="mostrarCodigo('html', this)">Ver HTML</button>
+        <button type="button" class="code-tab" onclick="mostrarCodigo('css', this)">Ver CSS</button>
+        <button type="button" class="code-tab" onclick="mostrarCodigo('js', this)">Ver JS</button>
+      </div>
+
+      <div class="code-viewer">
+
+<pre id="codigo-html" class="code-panel active"><code>&lt;section class="demo-form-card"&gt;
+  &lt;h3&gt;Formulario básico&lt;/h3&gt;
+  &lt;p&gt;Completa los campos y presiona el botón.&lt;/p&gt;
+
+  &lt;form&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" placeholder="Escribe tu nombre"&gt;
+
+    &lt;label for="edad"&gt;Edad:&lt;/label&gt;
+    &lt;input type="number" id="edad" placeholder="Escribe tu edad"&gt;
+
+    &lt;button type="button" onclick="mostrarDatos()"&gt;Mostrar datos&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;div id="resultado" class="resultado"&gt;
+    Aquí aparecerá la información capturada.
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+<pre id="codigo-css" class="code-panel"><code>.demo-form-card{
+  background:white;
+  border-radius:30px;
+  padding:28px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.22);
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+
+label{
+  font-weight:bold;
+  color:#333;
+}
+
+input{
+  padding:14px;
+  border:2px solid #eee;
+  border-radius:14px;
+  font-size:1rem;
+}
+
+input:focus{
+  outline:none;
+  border-color:#e34f26;
+}
+
+button{
+  margin-top:10px;
+  border:none;
+  padding:15px;
+  border-radius:15px;
+  background:#e34f26;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.resultado{
+  background:#fff3ef;
+  border-radius:20px;
+  padding:20px;
+}</code></pre>
+
+<pre id="codigo-js" class="code-panel"><code>function mostrarDatos(){
+  let nombre = document.getElementById("nombre").value.trim();
+  let edad = document.getElementById("edad").value.trim();
+  let resultado = document.getElementById("resultado");
+
+  if(nombre === "" || edad === ""){
+    resultado.innerHTML = "⚠️ Por favor completa todos los campos.";
+    resultado.style.background = "#ffe0d6";
+    resultado.style.border = "2px solid #e34f26";
+  } else {
+    resultado.innerHTML =
+      "&lt;strong&gt;✅ Datos capturados correctamente:&lt;/strong&gt;&lt;br&gt;&lt;br&gt;" +
+      "Nombre: " + nombre + "&lt;br&gt;" +
+      "Edad: " + edad + " años";
+
+    resultado.style.background = "#e8ffe8";
+    resultado.style.border = "2px solid #2ecc71";
+  }
+}</code></pre>
+
+      </div>
+    </section>
+
+    <!-- EXPLICACIÓN JS -->
+    <section class="section codigo-js">
+      <div class="section-title">
+        <span>07</span>
+        <h2>Explicación de JavaScript</h2>
+        <p>Este código lee los datos, valida campos vacíos y muestra el resultado.</p>
+      </div>
+
+      <article class="codigo-card">
+
+<pre><code>let nombre = document.getElementById("nombre").value;
+
+document.getElementById("resultado").innerHTML =
+"Nombre: " + nombre;</code></pre>
+
+      </article>
+    </section>
+
+    <!-- ACTIVIDAD -->
+    <section id="actividad" class="section actividad">
+      <div class="section-title">
+        <span>08</span>
+        <h2>Actividad para alumnos</h2>
+        <p>Crear un formulario completo de mínimo 6 campos.</p>
+      </div>
+
+      <div class="actividad-grid">
+
+        <article class="actividad-card">
+          <h3>Campos mínimos</h3>
+          <ul>
+            <li>Nombre completo</li>
+            <li>Edad</li>
+            <li>Correo</li>
+            <li>Grupo</li>
+            <li>Teléfono</li>
+            <li>Comentario</li>
+          </ul>
+        </article>
+
+        <article class="actividad-card">
+          <h3>Requisitos</h3>
+          <ul>
+            <li>Usar HTML5</li>
+            <li>Diseñar con CSS</li>
+            <li>Usar JavaScript</li>
+            <li>Validar campos vacíos</li>
+            <li>Mostrar datos en pantalla</li>
+            <li>Subir a GitHub</li>
+          </ul>
+        </article>
+
+        <article class="actividad-card destacado">
+          <h3>Reto extra</h3>
+          <p>
+            Agregar más campos como fecha, ciudad, materia favorita, motivo de contacto o lista desplegable.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Clase interactiva de Formularios HTML5 • Submódulo 2</p>
+    <span id="anio"></span>
+  </footer>
+
+  <button class="top-btn" type="button" onclick="subirArriba()">↑</button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
